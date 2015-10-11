@@ -1,0 +1,125 @@
+mov dword ptr [rsp+0x20], ecx
+mov qword ptr [rsp+0x18], r9
+pop r9
+sub rsp,0x20
+mov rcx,rdx
+mov rdx,r8
+mov r8,r9
+mov eax, dword ptr[rsp+0x40]
+call internal_syscall
+add rsp, 0x20
+mov r9, qword ptr [rsp+0x18]
+push r9
+ret
+int3
+mov r10,rcx
+nop
+nop
+nop
+nop
+nop
+syscall
+
+
+mov dword ptr [rsp+0x20], ecx
+mov qword ptr [rsp+0x18], r9
+pop r9
+sub rsp,0x20
+mov rcx,rdx
+mov rdx,r8
+mov r8,qword ptr [rsp+0x20]
+mov eax, dword ptr[rsp+0x38]
+call internal_syscall
+add rsp, 0x20
+push r9
+mov r9, qword ptr [rsp+0x18]
+ret
+int3
+mov r10,rcx
+nop
+nop
+nop
+nop
+nop
+syscall
+ret
+
+mov eax, ecx
+mov rcx, r8
+mov r8, r9
+mov r9, [rsp]
+sub rsp, 0x20
+call internal_syscall
+add rsp, 0x20
+ret
+int3
+mov r10,rcx
+nop
+nop
+nop
+nop
+nop
+syscall
+ret
+
+mov eax, ecx
+mov rcx, rdx
+mov rdx, r8
+mov r8, r9
+mov r9, [rsp+0x20]
+sub rsp, 0x20
+call internal_syscall
+add rsp, 0x20
+ret
+int3
+int3
+internal_syscall:
+mov r10,rcx
+nop
+nop
+nop
+nop
+nop
+syscall
+ret
+
+
+mov eax, ecx
+mov r10, rdx
+mov rdx, r8
+mov r8, r9
+mov r9, [rsp+0x20]
+syscall
+ret
+
+***working??***
+mov eax, ecx
+mov r10, rdx
+mov rdx, r8
+mov r8, r9
+xor r9, r9
+xchg r9, qword ptr [rsp+0x28]
+add rsp, 8
+nop
+syscall
+sub rsp, 8
+ret
+***************
+
+mov
+call get_syscall_num
+
+jmp get_syscall_num
+do_syscall:
+mov r10, rcx
+syscall
+ret
+get_syscall_num:
+mov eax, dword ptr[rip+syscall_num]
+jmp do_syscall
+nop
+nop
+nop
+nop
+nop
+syscall_num:

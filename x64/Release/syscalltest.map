@@ -1,0 +1,89 @@
+ syscalltest
+
+ Timestamp is 55f9e816 (Thu Sep 17 00:07:18 2015)
+
+ Preferred load address is 0000000140000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000ca5H .text$mn                CODE
+ 0002:00000000 00000010H .idata$5                DATA
+ 0002:00000010 000001a4H .rdata                  DATA
+ 0002:000001b4 00000178H .rdata$zzzdbg           DATA
+ 0002:0000032c 000000b4H .xdata                  DATA
+ 0002:000003e0 00000000H .edata                  DATA
+ 0002:000003e0 00000014H .idata$2                DATA
+ 0002:000003f4 00000014H .idata$3                DATA
+ 0002:00000408 00000010H .idata$4                DATA
+ 0002:00000418 00000022H .idata$6                DATA
+ 0003:00000000 0000002aH .data                   DATA
+ 0003:00000030 00600000H .bss                    DATA
+ 0004:00000000 00000084H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base               Lib:Object
+
+ 0000:00000000       __guard_fids_table         0000000000000000     <absolute>
+ 0000:00000000       __guard_flags              0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_count         0000000000000000     <absolute>
+ 0001:00000000       RtlSecureZeroMemory        0000000140001000 f i main.obj
+ 0001:0000001c       NtCurrentTeb               000000014000101c f i main.obj
+ 0001:00000028       dispError                  0000000140001028 f   main.obj
+ 0001:0000007c       performCoreInitialization  000000014000107c f   main.obj
+ 0001:000004d8       rvaToFileOffset            00000001400014d8 f   main.obj
+ 0001:00000548       ntapiLookup                0000000140001548 f   main.obj
+ 0001:00000608       createNtapiLookupTable     0000000140001608 f   main.obj
+ 0001:000007a4       selfUnmap                  00000001400017a4 f   main.obj
+ 0001:00000864       myRtlAdjustPrivileges      0000000140001864 f   main.obj
+ 0001:00000904       testNtapiTable             0000000140001904 f   main.obj
+ 0001:00000be4       initializeSyscallTable     0000000140001be4 f   main.obj
+ 0001:00000c2c       mymain                     0000000140001c2c f   main.obj
+ 0001:00000c70       syscallStub                0000000140001c70 f   auxfuncs.obj
+ 0001:00000c8c       myTerminate                0000000140001c8c f   auxfuncs.obj
+ 0001:00000c8e       mymemcmp                   0000000140001c8e f   auxfuncs.obj
+ 0002:00000000       __imp_NtUnmapViewOfSection 0000000140002000     myntdll:ntdll.dll
+ 0002:00000008       \177ntdll_NULL_THUNK_DATA  0000000140002008     myntdll:ntdll.dll
+ 0002:00000010       ??_C@_1DO@KOPOIMMM@?$AA?2?$AAs?$AAy?$AAs?$AAt?$AAe?$AAm?$AAr?$AAo?$AAo?$AAt?$AA?2?$AAs?$AAy?$AAs?$AAt?$AAe?$AAm?$AA3?$AA2?$AA?2?$AAn?$AAt?$AAd?$AAl?$AAl?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ 0000000140002010     main.obj
+ 0002:00000050       ??_C@_0BF@JCLEMGJN@NtOpenProcessTokenEx?$AA@ 0000000140002050     main.obj
+ 0002:00000068       ??_C@_0BI@JGDBJEPN@NtAdjustPrivilegesToken?$AA@ 0000000140002068     main.obj
+ 0002:00000080       ??_C@_1EE@OKOPIGK@?$AA?2?$AAs?$AAy?$AAs?$AAt?$AAe?$AAm?$AAr?$AAo?$AAo?$AAt?$AA?2?$AAs?$AAy?$AAs?$AAt?$AAe?$AAm?$AA3?$AA2?$AA?2?$AAn?$AAt?$AAo?$AAs?$AAk?$AAr?$AAn?$AAl?$AA?4?$AAe?$AAx@ 0000000140002080     main.obj
+ 0002:000000c8       ??_C@_0BB@PJBDBFCM@NtRaiseHardError?$AA@ 00000001400020c8     main.obj
+ 0002:000000e0       ??_C@_0L@GBDFLBPA@NtOpenFile?$AA@ 00000001400020e0     main.obj
+ 0002:000000f0       ??_C@_0BA@MANLHNBJ@NtCreateSection?$AA@ 00000001400020f0     main.obj
+ 0002:00000100       ??_C@_0BD@OPIOPJOL@NtMapViewOfSection?$AA@ 0000000140002100     main.obj
+ 0002:00000118       ??_C@_0O@JGCNKEPA@NtOpenProcess?$AA@ 0000000140002118     main.obj
+ 0002:00000128       ??_C@_0BB@HDNGEBBO@NtDelayExecution?$AA@ 0000000140002128     main.obj
+ 0002:00000140       ??_C@_0BD@LGANCOHC@NtTerminateProcess?$AA@ 0000000140002140     main.obj
+ 0002:000003e0       __IMPORT_DESCRIPTOR_ntdll  00000001400023e0     myntdll:ntdll.dll
+ 0002:000003f4       __NULL_IMPORT_DESCRIPTOR   00000001400023f4     myntdll:ntdll.dll
+
+ entry point at        0001:00000c2c
+
+ Static symbols
+
+ 0000:ff9fb000       .debug$S                   0000000140000000     myntdll:ntdll.dll
+ 0001:00000c70       $$000000                   0000000140001c70     auxfuncs.obj
+ 0002:0000032c       $unwind$RtlSecureZeroMemory 000000014000232c     main.obj
+ 0002:00000334       $unwind$dispError          0000000140002334     main.obj
+ 0002:00000340       $unwind$performCoreInitialization 0000000140002340     main.obj
+ 0002:0000035c       $unwind$rvaToFileOffset    000000014000235c     main.obj
+ 0002:00000364       $unwind$ntapiLookup        0000000140002364     main.obj
+ 0002:00000380       $unwind$createNtapiLookupTable 0000000140002380     main.obj
+ 0002:0000039c       $unwind$selfUnmap          000000014000239c     main.obj
+ 0002:000003b4       $unwind$myRtlAdjustPrivileges 00000001400023b4     main.obj
+ 0002:000003bc       $unwind$testNtapiTable     00000001400023bc     main.obj
+ 0002:000003d0       $unwind$initializeSyscallTable 00000001400023d0     main.obj
+ 0002:000003d8       $unwind$mymain             00000001400023d8     main.obj
+ 0002:00000430       .idata$6                   0000000140002430     myntdll:ntdll.dll
+ 0003:00000000       ?szOutputKeyPath@?1??myWPrintf@@9@9 0000000140003000     main.obj
+ 0003:00000030       sg_pSyscallTable           0000000140003030     main.obj
+ 0003:00200030       sg_pRawNtdll               0000000140203030     main.obj
+ 0004:00000000       $pdata$RtlSecureZeroMemory 0000000140604000     main.obj
+ 0004:0000000c       $pdata$dispError           000000014060400c     main.obj
+ 0004:00000018       $pdata$performCoreInitialization 0000000140604018     main.obj
+ 0004:00000024       $pdata$rvaToFileOffset     0000000140604024     main.obj
+ 0004:00000030       $pdata$ntapiLookup         0000000140604030     main.obj
+ 0004:0000003c       $pdata$createNtapiLookupTable 000000014060403c     main.obj
+ 0004:00000048       $pdata$selfUnmap           0000000140604048     main.obj
+ 0004:00000054       $pdata$myRtlAdjustPrivileges 0000000140604054     main.obj
+ 0004:00000060       $pdata$testNtapiTable      0000000140604060     main.obj
+ 0004:0000006c       $pdata$initializeSyscallTable 000000014060406c     main.obj
+ 0004:00000078       $pdata$mymain              0000000140604078     main.obj
